@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='power_genai',
-		version='1.0',
+		version='1.1',
 		description='power genai',
 		url='https://github.com/ExpertOfAI/power_genai',
 		author='ExpertOfAI',

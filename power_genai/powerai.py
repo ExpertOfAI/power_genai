@@ -16,7 +16,7 @@ def lemma(sentence):
 	
 def custom_cosine_similarity(loaders, query, query_embedding, top_n=25):	
 	final = {}
-	if len(preprocess(query)) == 0:
+	if len(re.sub(r'[^a-z0-9]', '', query.lower())) == 0:
 		return final	
 	labels, distances = loaders.model_embeddings.knn_query(query_embedding, k = top_n)
 	distances = [float(100-(d*100)) for d in distances[0]]
